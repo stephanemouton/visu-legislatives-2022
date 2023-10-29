@@ -1,3 +1,6 @@
+# visu-legislatives-2022 : expérimentation de Folium pour représenter la répartition géographique des législatives françaises de 2022
+# Création des cartes par circonscription
+
 import folium
 import actions_db
 import actions_geojson

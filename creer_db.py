@@ -1,8 +1,8 @@
-# Lit le fichier des résultats et crée une base de données correspondante
+# visu-legislatives-2022 : expérimentation de Folium pour représenter la répartition géographique des législatives françaises de 2022
+# Lit le fichier des résultats et crée une base de données pour utiliser plus facilement les données
 
 import sqlite3
 from sqlite3 import Error
-
 
 def creer_table(conn, create_table_sql):
     try:
@@ -29,7 +29,7 @@ def importe_donnes_en_base(file_name, db_file_name):
 
         # entête du CSV, découpé par zones (fixe = 1 seule zone, multiple = 1 par candidat)
         # Fixe : Zone département /circonscription / commune
-        #  Code du d�partement;Libell� du d�partement;Code de la circonscription;Libell� de la circonscription;Code de la commune;Libell� de la commune;
+        #  Code du département;Libellé du département;Code de la circonscription;Libellé de la circonscription;Code de la commune;Libellé de la commune;
         # Fixe : Informations générales sur le vote
         # Etat saisie;Inscrits;Abstentions;% Abs/Ins;Votants;% Vot/Ins;Blancs;% Blancs/Ins;% Blancs/Vot;Nuls;% Nuls/Ins;% Nuls/Vot;Exprim�s;% Exp/Ins;% Exp/Vot;
         sql_creer_table_communes = """ CREATE TABLE IF NOT EXISTS communes (

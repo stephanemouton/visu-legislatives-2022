@@ -1,17 +1,38 @@
-# Carte des résultats du second tour des législatives 2022
+# Visualisation des résultats du second tour des législatives 2022, dans les départements, par commune
 
-Les résultats des législatives sont donnés par circonscription, mais quelle est la répartition des votes par commune ? C'est ce que je me propose de visualiser.
+
+Le résultat est coLes résultats des législatives sont donnés par circonscription, mais quelle est la répartition des votes par commune ? Le code de ce dépôt en propose une visualisation géographique sous forme d'une [carte choroplèthe](https://fr.wikipedia.org/wiki/Carte_choropl%C3%A8the).
+
+C'est aussi l'occasion d'illustrer quelques unes des nombreuses possibilités de la bibliothèque de visualisation [Folium](https://python-visualization.github.io/folium/latest/)
+
+**Important : faute de données géographiques, et pour des raisons évidentes d'absence de commune pour les Français de l'étranger, les résultats des départements et territoires suivants ne sont PAS cartographiés**. 
+* Nouvelle Calédonie (code de département ZZ du fichier issu de data.gouv.fr)
+* Polynésie française (code de département ZP)
+* Saint Pierre et Miquelon (code de département ZS)
+* Wallis et Futuna (code de département ZW)
+* Saint Martin / Saint Barthélémy (code de département ZX)
+* Circonscriptions des Français de l'étranger (code de département ZZ)
+nsultable sur [une page dédiée](https://www.mouton.in/fr/projects/visu_legislatives/) de mon blog.
 
 ## Mode d'emploi
 
+1. Ajouter les fichiers geojsons des départements (il y a celui du Nord en exemple) dans le dosser geojsons
+2. Créer la base de données SQLite qui sera utilisée par les scripts en lançant `creer_db.py` (**Ne pas oublier de décommenter la création de la BdD qui est une ultime sécurité pour éviter tout écrasement**)
+3. Créer les cartes avec `creer_cartes.py`
+4. Créer le fichier markdown (adapté pour le générateur de sites HUGO) d'index des résultats avec `creer_index.py`
+
+## Licence
+
+* Le code source disponible dans ce dépôt est sous licence Apache V2.0.
+* Les données sont sous leurs droits respectifs.
 
 ## Documentation
 
-L'objectif est de générer les cartes des résultats à l'aide de folium et de scripts python.
+L'objectif est de générer les cartes des résultats éléectoraux à l'aide de folium et de scripts python.
 
-### Documentation de référenceFolium
+### Documentation de référence Folium
 
-* [Le site de Folium](https://python-visualization.github.io/folium/quickstart.html)
+* [Commencer à utiliser Folium](https://python-visualization.github.io/folium/quickstart.html) sur le site de la bibliothèque.
 
 ### Tutoriels Folium
 
@@ -19,6 +40,11 @@ L'objectif est de générer les cartes des résultats à l'aide de folium et de 
 * https://autogis-site.readthedocs.io/en/latest/notebooks/L5/02_interactive-map-folium.html
 * **Attention : page sur medium.com, sujette à restriction d'accès** [A Python Tutorial on Geomapping using Folium and GeoPandas](https://medium.com/@jade.adams517/using-geopandas-and-folium-to-build-maps-on-python-c51c5aad5f44) l'article montre les grands principes mais effectue trop de simplifications dans l'usage de Pandas pour être facilement généralisable.
 * [Création d'une carte interactive en utilisant le langage Python ](https://www.data.gouv.fr/fr/reuses/creation-dune-carte-interactive-en-utilisant-le-langage-python/) mais l'information est véritablement sur le github https://github.com/Guillaume-Fgt/Folium_Villes_Fleuries_Idf avec un exemple inspirant.
+
+### Informations sur jinja2
+
+* [Une piqure de rappel sur l'utilisation de ce moteur de template](https://zetcode.com/python/jinja/)
+* *StackOverflow, évidemment* [Utiliser un fichier comme template](https://stackoverflow.com/questions/38642557/how-to-load-jinja-template-directly-from-filesystem)
 
 ### Articles et inspiration
 

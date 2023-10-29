@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_aa1bfb605f85cc1dabb8577ac4cacbf1 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    
+                    <style>
+                        .foliumtooltip {
+                            
+                        }
+                       .foliumtooltip table{
+                            margin: auto;
+                        }
+                        .foliumtooltip tr{
+                            text-align: left;
+                        }
+                        .foliumtooltip th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+    
+                    <style>
+                        .foliumtooltip {
+                            
+                        }
+                       .foliumtooltip table{
+                            margin: auto;
+                        }
+                        .foliumtooltip tr{
+                            text-align: left;
+                        }
+                        .foliumtooltip th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+</head>
+<body>    
+    
+                 <h3 align="center" style="font-size:16px"><b>Val-de-Marne, 10ème circonscription : Mathilde PANOT (NUP) élue.</b></h3>
+                 
+    
+            <div class="folium-map" id="map_aa1bfb605f85cc1dabb8577ac4cacbf1" ></div>
+        
+</body>
+<script>    
+    
+            var map_aa1bfb605f85cc1dabb8577ac4cacbf1 = L.map(
+                "map_aa1bfb605f85cc1dabb8577ac4cacbf1",
+                {
+                    center: [48.80953833298025, 2.35889992485735],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 10,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_480351b6eb732d6b3f0272dbef257fdb = L.tileLayer(
+                "https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"http://cartodb.com/attributions\"\u003eCartoDB\u003c/a\u003e, CartoDB \u003ca href =\"http://cartodb.com/attributions\"\u003eattributions\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_aa1bfb605f85cc1dabb8577ac4cacbf1);
+        
+    
+            var choropleth_555cf0ee51f1c7b9ec002a629220c257 = L.featureGroup(
+                {}
+            ).addTo(map_aa1bfb605f85cc1dabb8577ac4cacbf1);
+        
+    
+        function geo_json_11378574b939525b213d33c6fdc163e7_styler(feature) {
+            switch(feature.id) {
+                case "vitry-sur-seine": 
+                    return {"color": "black", "fillColor": "#74a9cf", "fillOpacity": 1, "opacity": 0.7, "weight": 1};
+                case "kremlin-bicetre": 
+                    return {"color": "black", "fillColor": "#f1eef6", "fillOpacity": 1, "opacity": 0.7, "weight": 1};
+                default:
+                    return {"color": "black", "fillColor": "#045a8d", "fillOpacity": 1, "opacity": 0.7, "weight": 1};
+            }
+        }
+
+        function geo_json_11378574b939525b213d33c6fdc163e7_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_11378574b939525b213d33c6fdc163e7 = L.geoJson(null, {
+                onEachFeature: geo_json_11378574b939525b213d33c6fdc163e7_onEachFeature,
+            
+                style: geo_json_11378574b939525b213d33c6fdc163e7_styler,
+        });
+
+        function geo_json_11378574b939525b213d33c6fdc163e7_add (data) {
+            geo_json_11378574b939525b213d33c6fdc163e7
+                .addData(data)
+                .addTo(choropleth_555cf0ee51f1c7b9ec002a629220c257);
+        }
+            geo_json_11378574b939525b213d33c6fdc163e7_add({"features": [{"geometry": {"coordinates": [[[2.3711660804846, 48.803985830563], [2.3756714908057, 48.805917054142], [2.3868918231477, 48.800295474842], [2.3942552313772, 48.800238582074], [2.4088902175713, 48.808463007472], [2.4109918187151, 48.803832546638], [2.4226739248417, 48.791772029944], [2.4147835524145, 48.77727124747], [2.3987277076702, 48.774717240567], [2.3751022594717, 48.771375189199], [2.3678256238607, 48.771903535588], [2.3672764992453, 48.779373862747], [2.3757936004449, 48.787977423714], [2.3713648055528, 48.794953350338], [2.3711660804846, 48.803985830563]]], "type": "Polygon"}, "id": "vitry-sur-seine", "properties": {"code": "94081", "nom": "Vitry-sur-Seine", "pourcentage": 66.09, "voix": 3999}, "type": "Feature"}, {"geometry": {"coordinates": [[[2.3290632572873, 48.813783346799], [2.3318980606376, 48.817010929642], [2.3439025047441, 48.815767001297], [2.3564647458137, 48.815954893718], [2.3448620289972, 48.805407706013], [2.3411905327909, 48.810955658092], [2.3290632572873, 48.813783346799]]], "type": "Polygon"}, "id": "gentilly", "properties": {"code": "94037", "nom": "Gentilly", "pourcentage": 70.57, "voix": 1748}, "type": "Feature"}, {"geometry": {"coordinates": [[[2.3711660804846, 48.803985830563], [2.3672229478006, 48.808032065507], [2.3642042811729, 48.816398323996], [2.3900720145113, 48.82569232682], [2.4093609378413, 48.816675787287], [2.4088902175713, 48.808463007472], [2.3942552313772, 48.800238582074], [2.3868918231477, 48.800295474842], [2.3756714908057, 48.805917054142], [2.3711660804846, 48.803985830563]]], "type": "Polygon"}, "id": "ivry-sur-seine", "properties": {"code": "94041", "nom": "Ivry-sur-Seine", "pourcentage": 71.33, "voix": 9469}, "type": "Feature"}, {"geometry": {"coordinates": [[[2.3642042811729, 48.816398323996], [2.3672229478006, 48.808032065507], [2.3477839079735, 48.80149602923], [2.3448620289972, 48.805407706013], [2.3564647458137, 48.815954893718], [2.3642042811729, 48.816398323996]]], "type": "Polygon"}, "id": "kremlin-bicetre", "properties": {"code": "94043", "nom": "Kremlin-Bic\u00eatre", "pourcentage": 59.65, "voix": 3523}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        function geo_json_e2dff649b7d5b48414cce0c9e434e6a5_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "#00000000", "fillColor": "#00000000", "weight": 1};
+            }
+        }
+
+        function geo_json_e2dff649b7d5b48414cce0c9e434e6a5_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_e2dff649b7d5b48414cce0c9e434e6a5 = L.geoJson(null, {
+                onEachFeature: geo_json_e2dff649b7d5b48414cce0c9e434e6a5_onEachFeature,
+            
+                style: geo_json_e2dff649b7d5b48414cce0c9e434e6a5_styler,
+        });
+
+        function geo_json_e2dff649b7d5b48414cce0c9e434e6a5_add (data) {
+            geo_json_e2dff649b7d5b48414cce0c9e434e6a5
+                .addData(data)
+                .addTo(geo_json_11378574b939525b213d33c6fdc163e7);
+        }
+            geo_json_e2dff649b7d5b48414cce0c9e434e6a5_add({"features": [{"geometry": {"coordinates": [[[2.3711660804846, 48.803985830563], [2.3756714908057, 48.805917054142], [2.3868918231477, 48.800295474842], [2.3942552313772, 48.800238582074], [2.4088902175713, 48.808463007472], [2.4109918187151, 48.803832546638], [2.4226739248417, 48.791772029944], [2.4147835524145, 48.77727124747], [2.3987277076702, 48.774717240567], [2.3751022594717, 48.771375189199], [2.3678256238607, 48.771903535588], [2.3672764992453, 48.779373862747], [2.3757936004449, 48.787977423714], [2.3713648055528, 48.794953350338], [2.3711660804846, 48.803985830563]]], "type": "Polygon"}, "id": "vitry-sur-seine", "properties": {"code": "94081", "nom": "Vitry-sur-Seine", "pourcentage": 66.09, "voix": 3999}, "type": "Feature"}, {"geometry": {"coordinates": [[[2.3290632572873, 48.813783346799], [2.3318980606376, 48.817010929642], [2.3439025047441, 48.815767001297], [2.3564647458137, 48.815954893718], [2.3448620289972, 48.805407706013], [2.3411905327909, 48.810955658092], [2.3290632572873, 48.813783346799]]], "type": "Polygon"}, "id": "gentilly", "properties": {"code": "94037", "nom": "Gentilly", "pourcentage": 70.57, "voix": 1748}, "type": "Feature"}, {"geometry": {"coordinates": [[[2.3711660804846, 48.803985830563], [2.3672229478006, 48.808032065507], [2.3642042811729, 48.816398323996], [2.3900720145113, 48.82569232682], [2.4093609378413, 48.816675787287], [2.4088902175713, 48.808463007472], [2.3942552313772, 48.800238582074], [2.3868918231477, 48.800295474842], [2.3756714908057, 48.805917054142], [2.3711660804846, 48.803985830563]]], "type": "Polygon"}, "id": "ivry-sur-seine", "properties": {"code": "94041", "nom": "Ivry-sur-Seine", "pourcentage": 71.33, "voix": 9469}, "type": "Feature"}, {"geometry": {"coordinates": [[[2.3642042811729, 48.816398323996], [2.3672229478006, 48.808032065507], [2.3477839079735, 48.80149602923], [2.3448620289972, 48.805407706013], [2.3564647458137, 48.815954893718], [2.3642042811729, 48.816398323996]]], "type": "Polygon"}, "id": "kremlin-bicetre", "properties": {"code": "94043", "nom": "Kremlin-Bic\u00eatre", "pourcentage": 59.65, "voix": 3523}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+    geo_json_e2dff649b7d5b48414cce0c9e434e6a5.bindTooltip(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature=>typeof(feature)=='object' ? JSON.stringify(feature) : feature;
+    let fields = ["nom", "pourcentage", "voix"];
+    let aliases = ["Commune : ", "R\u00e9sultat (%) : ", "Nombre de voix : "];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i].toLocaleString()}</th>
+            
+            <td>${handleObject(layer.feature.properties[v]).toLocaleString()}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{"className": "foliumtooltip", "sticky": false});
+                     
+    
+    var color_map_ff9e0dd047aa296b982aa4592e3470a0 = {};
+
+    
+    color_map_ff9e0dd047aa296b982aa4592e3470a0.color = d3.scale.threshold()
+              .domain([59.65, 59.67340681362725, 59.69681362725451, 59.72022044088176, 59.743627254509015, 59.76703406813627, 59.79044088176352, 59.81384769539078, 59.83725450901804, 59.86066132264529, 59.884068136272546, 59.9074749498998, 59.930881763527054, 59.95428857715431, 59.97769539078156, 60.00110220440882, 60.02450901803607, 60.047915831663325, 60.07132264529058, 60.09472945891783, 60.11813627254509, 60.14154308617234, 60.164949899799595, 60.18835671342685, 60.21176352705411, 60.235170340681364, 60.25857715430862, 60.28198396793587, 60.305390781563126, 60.32879759519038, 60.352204408817634, 60.37561122244489, 60.39901803607214, 60.4224248496994, 60.44583166332665, 60.469238476953905, 60.49264529058116, 60.51605210420841, 60.53945891783567, 60.56286573146292, 60.58627254509018, 60.609679358717436, 60.63308617234469, 60.656492985971944, 60.6798997995992, 60.70330661322645, 60.726713426853706, 60.75012024048096, 60.773527054108214, 60.79693386773547, 60.82034068136272, 60.84374749498998, 60.86715430861723, 60.890561122244485, 60.91396793587174, 60.937374749499, 60.960781563126254, 60.98418837675351, 61.00759519038076, 61.031002004008016, 61.05440881763527, 61.077815631262524, 61.10122244488978, 61.12462925851703, 61.148036072144286, 61.17144288577154, 61.194849699398794, 61.21825651302605, 61.2416633266533, 61.26507014028056, 61.28847695390782, 61.31188376753507, 61.335290581162326, 61.35869739478958, 61.382104208416834, 61.40551102204409, 61.42891783567134, 61.452324649298596, 61.47573146292585, 61.499138276553104, 61.52254509018036, 61.54595190380761, 61.569358717434866, 61.59276553106212, 61.616172344689375, 61.63957915831663, 61.66298597194388, 61.686392785571144, 61.7097995991984, 61.73320641282565, 61.756613226452906, 61.78002004008016, 61.803426853707414, 61.82683366733467, 61.85024048096192, 61.873647294589176, 61.89705410821643, 61.920460921843684, 61.94386773547094, 61.96727454909819, 61.99068136272545, 62.0140881763527, 62.03749498997996, 62.060901803607216, 62.08430861723447, 62.107715430861724, 62.13112224448898, 62.15452905811623, 62.177935871743486, 62.20134268537074, 62.224749498997994, 62.24815631262525, 62.2715631262525, 62.294969939879756, 62.31837675350701, 62.341783567134264, 62.36519038076152, 62.38859719438878, 62.412004008016034, 62.43541082164329, 62.45881763527054, 62.482224448897796, 62.50563126252505, 62.529038076152304, 62.55244488977956, 62.57585170340681, 62.599258517034066, 62.62266533066132, 62.646072144288574, 62.66947895791583, 62.69288577154308, 62.716292585170336, 62.7396993987976, 62.76310621242485, 62.786513026052106, 62.80991983967936, 62.833326653306614, 62.85673346693387, 62.88014028056112, 62.903547094188376, 62.92695390781563, 62.950360721442884, 62.97376753507014, 62.99717434869739, 63.020581162324646, 63.0439879759519, 63.067394789579154, 63.09080160320641, 63.11420841683366, 63.13761523046092, 63.16102204408818, 63.18442885771543, 63.207835671342686, 63.23124248496994, 63.254649298597194, 63.27805611222445, 63.3014629258517, 63.324869739478956, 63.34827655310621, 63.371683366733464, 63.39509018036072, 63.41849699398797, 63.441903807615226, 63.46531062124248, 63.48871743486974, 63.512124248496995, 63.53553106212425, 63.558937875751504, 63.58234468937876, 63.60575150300601, 63.629158316633266, 63.65256513026052, 63.675971943887774, 63.69937875751503, 63.72278557114228, 63.746192384769536, 63.76959919839679, 63.793006012024044, 63.8164128256513, 63.83981963927855, 63.86322645290581, 63.88663326653307, 63.91004008016032, 63.933446893787576, 63.95685370741483, 63.980260521042084, 64.00366733466933, 64.02707414829659, 64.05048096192385, 64.0738877755511, 64.09729458917836, 64.12070140280561, 64.14410821643287, 64.16751503006012, 64.19092184368738, 64.21432865731462, 64.23773547094189, 64.26114228456913, 64.2845490981964, 64.30795591182364, 64.3313627254509, 64.35476953907815, 64.37817635270541, 64.40158316633267, 64.42498997995992, 64.44839679358718, 64.47180360721443, 64.49521042084169, 64.51861723446893, 64.5420240480962, 64.56543086172344, 64.5888376753507, 64.61224448897795, 64.63565130260521, 64.65905811623246, 64.68246492985972, 64.70587174348697, 64.72927855711423, 64.75268537074147, 64.77609218436874, 64.799498997996, 64.82290581162324, 64.8463126252505, 64.86971943887775, 64.89312625250501, 64.91653306613226, 64.93993987975952, 64.96334669338677, 64.98675350701403, 65.01016032064128, 65.03356713426854, 65.05697394789578, 65.08038076152305, 65.1037875751503, 65.12719438877755, 65.1506012024048, 65.17400801603206, 65.19741482965932, 65.22082164328657, 65.24422845691383, 65.26763527054108, 65.29104208416834, 65.31444889779559, 65.33785571142285, 65.3612625250501, 65.38466933867736, 65.4080761523046, 65.43148296593186, 65.45488977955911, 65.47829659318637, 65.50170340681362, 65.52511022044088, 65.54851703406814, 65.57192384769539, 65.59533066132265, 65.6187374749499, 65.64214428857716, 65.6655511022044, 65.68895791583166, 65.71236472945891, 65.73577154308617, 65.75917835671342, 65.78258517034068, 65.80599198396793, 65.82939879759519, 65.85280561122244, 65.8762124248497, 65.89961923847696, 65.9230260521042, 65.94643286573147, 65.96983967935871, 65.99324649298597, 66.01665330661322, 66.04006012024048, 66.06346693386773, 66.08687374749499, 66.11028056112224, 66.1336873747495, 66.15709418837675, 66.18050100200401, 66.20390781563125, 66.22731462925852, 66.25072144288578, 66.27412825651302, 66.29753507014028, 66.32094188376753, 66.34434869739479, 66.36775551102204, 66.3911623246493, 66.41456913827655, 66.43797595190381, 66.46138276553106, 66.48478957915832, 66.50819639278556, 66.53160320641283, 66.55501002004007, 66.57841683366733, 66.6018236472946, 66.62523046092184, 66.6486372745491, 66.67204408817635, 66.69545090180361, 66.71885771543086, 66.74226452905812, 66.76567134268537, 66.78907815631263, 66.81248496993987, 66.83589178356713, 66.85929859719438, 66.88270541082164, 66.90611222444889, 66.92951903807615, 66.95292585170341, 66.97633266533066, 66.99973947895792, 67.02314629258517, 67.04655310621243, 67.06995991983968, 67.09336673346694, 67.11677354709418, 67.14018036072144, 67.16358717434869, 67.18699398797595, 67.2104008016032, 67.23380761523046, 67.25721442885771, 67.28062124248497, 67.30402805611223, 67.32743486973948, 67.35084168336674, 67.37424849699399, 67.39765531062125, 67.4210621242485, 67.44446893787575, 67.467875751503, 67.49128256513026, 67.51468937875751, 67.53809619238477, 67.56150300601202, 67.58490981963928, 67.60831663326653, 67.63172344689379, 67.65513026052105, 67.6785370741483, 67.70194388777554, 67.7253507014028, 67.74875751503006, 67.77216432865731, 67.79557114228457, 67.81897795591182, 67.84238476953908, 67.86579158316633, 67.88919839679359, 67.91260521042084, 67.9360120240481, 67.95941883767534, 67.9828256513026, 68.00623246492987, 68.02963927855711, 68.05304609218436, 68.07645290581162, 68.09985971943888, 68.12326653306613, 68.14667334669339, 68.17008016032064, 68.1934869739479, 68.21689378757515, 68.2403006012024, 68.26370741482965, 68.28711422845691, 68.31052104208416, 68.33392785571142, 68.35733466933868, 68.38074148296593, 68.40414829659318, 68.42755511022044, 68.4509619238477, 68.47436873747495, 68.49777555110221, 68.52118236472946, 68.54458917835672, 68.56799599198396, 68.59140280561122, 68.61480961923847, 68.63821643286573, 68.66162324649298, 68.68503006012024, 68.70843687374749, 68.73184368737475, 68.755250501002, 68.77865731462926, 68.80206412825652, 68.82547094188376, 68.84887775551103, 68.87228456913827, 68.89569138276553, 68.91909819639278, 68.94250501002004, 68.96591182364729, 68.98931863727455, 69.0127254509018, 69.03613226452906, 69.0595390781563, 69.08294589178357, 69.10635270541081, 69.12975951903807, 69.15316633266534, 69.17657314629258, 69.19997995991983, 69.22338677354709, 69.24679358717435, 69.2702004008016, 69.29360721442886, 69.31701402805611, 69.34042084168337, 69.36382765531062, 69.38723446893788, 69.41064128256512, 69.43404809619238, 69.45745490981963, 69.48086172344689, 69.50426853707415, 69.5276753507014, 69.55108216432866, 69.57448897795591, 69.59789579158317, 69.62130260521042, 69.64470941883768, 69.66811623246493, 69.69152304609219, 69.71492985971943, 69.7383366733467, 69.76174348697394, 69.7851503006012, 69.80855711422845, 69.83196392785571, 69.85537074148296, 69.87877755511022, 69.90218436873748, 69.92559118236473, 69.94899799599199, 69.97240480961923, 69.9958116232465, 70.01921843687374, 70.042625250501, 70.06603206412825, 70.08943887775551, 70.11284569138276, 70.13625250501002, 70.15965931863727, 70.18306613226453, 70.20647294589179, 70.22987975951904, 70.25328657314628, 70.27669338677354, 70.3001002004008, 70.32350701402805, 70.34691382765531, 70.37032064128256, 70.39372745490982, 70.41713426853707, 70.44054108216433, 70.46394789579158, 70.48735470941884, 70.51076152304609, 70.53416833667335, 70.55757515030061, 70.58098196392785, 70.6043887775551, 70.62779559118236, 70.65120240480962, 70.67460921843687, 70.69801603206413, 70.72142284569138, 70.74482965931864, 70.76823647294589, 70.79164328657315, 70.8150501002004, 70.83845691382766, 70.8618637274549, 70.88527054108216, 70.90867735470941, 70.93208416833667, 70.95549098196392, 70.97889779559118, 71.00230460921844, 71.02571142284569, 71.04911823647295, 71.0725250501002, 71.09593186372746, 71.1193386773547, 71.14274549098197, 71.16615230460921, 71.18955911823647, 71.21296593186372, 71.23637274549098, 71.25977955911823, 71.28318637274549, 71.30659318637274, 71.33])
+              .range(['#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#d0d1e6ff', '#d0d1e6ff', '#d0d1e6ff', '#d0d1e6ff', '#d0d1e6ff', '#d0d1e6ff', '#d0d1e6ff', '#d0d1e6ff', '#d0d1e6ff', '#d0d1e6ff', '#d0d1e6ff', '#d0d1e6ff', '#d0d1e6ff', '#d0d1e6ff', '#d0d1e6ff', '#d0d1e6ff', '#d0d1e6ff', '#d0d1e6ff', '#d0d1e6ff', '#d0d1e6ff', '#d0d1e6ff', '#d0d1e6ff', '#d0d1e6ff', '#d0d1e6ff', '#d0d1e6ff', '#d0d1e6ff', '#d0d1e6ff', '#d0d1e6ff', '#d0d1e6ff', '#d0d1e6ff', '#d0d1e6ff', '#d0d1e6ff', '#d0d1e6ff', '#d0d1e6ff', '#d0d1e6ff', '#d0d1e6ff', '#d0d1e6ff', '#d0d1e6ff', '#d0d1e6ff', '#d0d1e6ff', '#d0d1e6ff', '#d0d1e6ff', '#d0d1e6ff', '#d0d1e6ff', '#d0d1e6ff', '#d0d1e6ff', '#d0d1e6ff', '#d0d1e6ff', '#d0d1e6ff', '#d0d1e6ff', '#d0d1e6ff', '#d0d1e6ff', '#d0d1e6ff', '#d0d1e6ff', '#d0d1e6ff', '#d0d1e6ff', '#d0d1e6ff', '#d0d1e6ff', '#d0d1e6ff', '#d0d1e6ff', '#d0d1e6ff', '#d0d1e6ff', '#d0d1e6ff', '#d0d1e6ff', '#d0d1e6ff', '#d0d1e6ff', '#d0d1e6ff', '#d0d1e6ff', '#d0d1e6ff', '#d0d1e6ff', '#d0d1e6ff', '#d0d1e6ff', '#d0d1e6ff', '#d0d1e6ff', '#d0d1e6ff', '#d0d1e6ff', '#d0d1e6ff', '#d0d1e6ff', '#d0d1e6ff', '#d0d1e6ff', '#d0d1e6ff', '#d0d1e6ff', '#d0d1e6ff', '#a6bddbff', '#a6bddbff', '#a6bddbff', '#a6bddbff', '#a6bddbff', '#a6bddbff', '#a6bddbff', '#a6bddbff', '#a6bddbff', '#a6bddbff', '#a6bddbff', '#a6bddbff', '#a6bddbff', '#a6bddbff', '#a6bddbff', '#a6bddbff', '#a6bddbff', '#a6bddbff', '#a6bddbff', '#a6bddbff', '#a6bddbff', '#a6bddbff', '#a6bddbff', '#a6bddbff', '#a6bddbff', '#a6bddbff', '#a6bddbff', '#a6bddbff', '#a6bddbff', '#a6bddbff', '#a6bddbff', '#a6bddbff', '#a6bddbff', '#a6bddbff', '#a6bddbff', '#a6bddbff', '#a6bddbff', '#a6bddbff', '#a6bddbff', '#a6bddbff', '#a6bddbff', '#a6bddbff', '#a6bddbff', '#a6bddbff', '#a6bddbff', '#a6bddbff', '#a6bddbff', '#a6bddbff', '#a6bddbff', '#a6bddbff', '#a6bddbff', '#a6bddbff', '#a6bddbff', '#a6bddbff', '#a6bddbff', '#a6bddbff', '#a6bddbff', '#a6bddbff', '#a6bddbff', '#a6bddbff', '#a6bddbff', '#a6bddbff', '#a6bddbff', '#a6bddbff', '#a6bddbff', '#a6bddbff', '#a6bddbff', '#a6bddbff', '#a6bddbff', '#a6bddbff', '#a6bddbff', '#a6bddbff', '#a6bddbff', '#a6bddbff', '#a6bddbff', '#a6bddbff', '#a6bddbff', '#a6bddbff', '#a6bddbff', '#a6bddbff', '#a6bddbff', '#a6bddbff', '#a6bddbff', '#74a9cfff', '#74a9cfff', '#74a9cfff', '#74a9cfff', '#74a9cfff', '#74a9cfff', '#74a9cfff', '#74a9cfff', '#74a9cfff', '#74a9cfff', '#74a9cfff', '#74a9cfff', '#74a9cfff', '#74a9cfff', '#74a9cfff', '#74a9cfff', '#74a9cfff', '#74a9cfff', '#74a9cfff', '#74a9cfff', '#74a9cfff', '#74a9cfff', '#74a9cfff', '#74a9cfff', '#74a9cfff', '#74a9cfff', '#74a9cfff', '#74a9cfff', '#74a9cfff', '#74a9cfff', '#74a9cfff', '#74a9cfff', '#74a9cfff', '#74a9cfff', '#74a9cfff', '#74a9cfff', '#74a9cfff', '#74a9cfff', '#74a9cfff', '#74a9cfff', '#74a9cfff', '#74a9cfff', '#74a9cfff', '#74a9cfff', '#74a9cfff', '#74a9cfff', '#74a9cfff', '#74a9cfff', '#74a9cfff', '#74a9cfff', '#74a9cfff', '#74a9cfff', '#74a9cfff', '#74a9cfff', '#74a9cfff', '#74a9cfff', '#74a9cfff', '#74a9cfff', '#74a9cfff', '#74a9cfff', '#74a9cfff', '#74a9cfff', '#74a9cfff', '#74a9cfff', '#74a9cfff', '#74a9cfff', '#74a9cfff', '#74a9cfff', '#74a9cfff', '#74a9cfff', '#74a9cfff', '#74a9cfff', '#74a9cfff', '#74a9cfff', '#74a9cfff', '#74a9cfff', '#74a9cfff', '#74a9cfff', '#74a9cfff', '#74a9cfff', '#74a9cfff', '#74a9cfff', '#74a9cfff', '#2b8cbeff', '#2b8cbeff', '#2b8cbeff', '#2b8cbeff', '#2b8cbeff', '#2b8cbeff', '#2b8cbeff', '#2b8cbeff', '#2b8cbeff', '#2b8cbeff', '#2b8cbeff', '#2b8cbeff', '#2b8cbeff', '#2b8cbeff', '#2b8cbeff', '#2b8cbeff', '#2b8cbeff', '#2b8cbeff', '#2b8cbeff', '#2b8cbeff', '#2b8cbeff', '#2b8cbeff', '#2b8cbeff', '#2b8cbeff', '#2b8cbeff', '#2b8cbeff', '#2b8cbeff', '#2b8cbeff', '#2b8cbeff', '#2b8cbeff', '#2b8cbeff', '#2b8cbeff', '#2b8cbeff', '#2b8cbeff', '#2b8cbeff', '#2b8cbeff', '#2b8cbeff', '#2b8cbeff', '#2b8cbeff', '#2b8cbeff', '#2b8cbeff', '#2b8cbeff', '#2b8cbeff', '#2b8cbeff', '#2b8cbeff', '#2b8cbeff', '#2b8cbeff', '#2b8cbeff', '#2b8cbeff', '#2b8cbeff', '#2b8cbeff', '#2b8cbeff', '#2b8cbeff', '#2b8cbeff', '#2b8cbeff', '#2b8cbeff', '#2b8cbeff', '#2b8cbeff', '#2b8cbeff', '#2b8cbeff', '#2b8cbeff', '#2b8cbeff', '#2b8cbeff', '#2b8cbeff', '#2b8cbeff', '#2b8cbeff', '#2b8cbeff', '#2b8cbeff', '#2b8cbeff', '#2b8cbeff', '#2b8cbeff', '#2b8cbeff', '#2b8cbeff', '#2b8cbeff', '#2b8cbeff', '#2b8cbeff', '#2b8cbeff', '#2b8cbeff', '#2b8cbeff', '#2b8cbeff', '#2b8cbeff', '#2b8cbeff', '#2b8cbeff', '#045a8dff', '#045a8dff', '#045a8dff', '#045a8dff', '#045a8dff', '#045a8dff', '#045a8dff', '#045a8dff', '#045a8dff', '#045a8dff', '#045a8dff', '#045a8dff', '#045a8dff', '#045a8dff', '#045a8dff', '#045a8dff', '#045a8dff', '#045a8dff', '#045a8dff', '#045a8dff', '#045a8dff', '#045a8dff', '#045a8dff', '#045a8dff', '#045a8dff', '#045a8dff', '#045a8dff', '#045a8dff', '#045a8dff', '#045a8dff', '#045a8dff', '#045a8dff', '#045a8dff', '#045a8dff', '#045a8dff', '#045a8dff', '#045a8dff', '#045a8dff', '#045a8dff', '#045a8dff', '#045a8dff', '#045a8dff', '#045a8dff', '#045a8dff', '#045a8dff', '#045a8dff', '#045a8dff', '#045a8dff', '#045a8dff', '#045a8dff', '#045a8dff', '#045a8dff', '#045a8dff', '#045a8dff', '#045a8dff', '#045a8dff', '#045a8dff', '#045a8dff', '#045a8dff', '#045a8dff', '#045a8dff', '#045a8dff', '#045a8dff', '#045a8dff', '#045a8dff', '#045a8dff', '#045a8dff', '#045a8dff', '#045a8dff', '#045a8dff', '#045a8dff', '#045a8dff', '#045a8dff', '#045a8dff', '#045a8dff', '#045a8dff', '#045a8dff', '#045a8dff', '#045a8dff', '#045a8dff', '#045a8dff', '#045a8dff', '#045a8dff', '#045a8dff']);
+    
+
+    color_map_ff9e0dd047aa296b982aa4592e3470a0.x = d3.scale.linear()
+              .domain([59.65, 71.33])
+              .range([0, 400]);
+
+    color_map_ff9e0dd047aa296b982aa4592e3470a0.legend = L.control({position: 'topright'});
+    color_map_ff9e0dd047aa296b982aa4592e3470a0.legend.onAdd = function (map) {var div = L.DomUtil.create('div', 'legend'); return div};
+    color_map_ff9e0dd047aa296b982aa4592e3470a0.legend.addTo(map_aa1bfb605f85cc1dabb8577ac4cacbf1);
+
+    color_map_ff9e0dd047aa296b982aa4592e3470a0.xAxis = d3.svg.axis()
+        .scale(color_map_ff9e0dd047aa296b982aa4592e3470a0.x)
+        .orient("top")
+        .tickSize(1)
+        .tickValues([59.65, 61.596666666666664, 63.54333333333333, 65.49, 67.43666666666667, 69.38333333333333, 71.33]);
+
+    color_map_ff9e0dd047aa296b982aa4592e3470a0.svg = d3.select(".legend.leaflet-control").append("svg")
+        .attr("id", 'legend')
+        .attr("width", 450)
+        .attr("height", 40);
+
+    color_map_ff9e0dd047aa296b982aa4592e3470a0.g = color_map_ff9e0dd047aa296b982aa4592e3470a0.svg.append("g")
+        .attr("class", "key")
+        .attr("transform", "translate(25,16)");
+
+    color_map_ff9e0dd047aa296b982aa4592e3470a0.g.selectAll("rect")
+        .data(color_map_ff9e0dd047aa296b982aa4592e3470a0.color.range().map(function(d, i) {
+          return {
+            x0: i ? color_map_ff9e0dd047aa296b982aa4592e3470a0.x(color_map_ff9e0dd047aa296b982aa4592e3470a0.color.domain()[i - 1]) : color_map_ff9e0dd047aa296b982aa4592e3470a0.x.range()[0],
+            x1: i < color_map_ff9e0dd047aa296b982aa4592e3470a0.color.domain().length ? color_map_ff9e0dd047aa296b982aa4592e3470a0.x(color_map_ff9e0dd047aa296b982aa4592e3470a0.color.domain()[i]) : color_map_ff9e0dd047aa296b982aa4592e3470a0.x.range()[1],
+            z: d
+          };
+        }))
+      .enter().append("rect")
+        .attr("height", 10)
+        .attr("x", function(d) { return d.x0; })
+        .attr("width", function(d) { return d.x1 - d.x0; })
+        .style("fill", function(d) { return d.z; });
+
+    color_map_ff9e0dd047aa296b982aa4592e3470a0.g.call(color_map_ff9e0dd047aa296b982aa4592e3470a0.xAxis).append("text")
+        .attr("class", "caption")
+        .attr("y", 21)
+        .text('Pourcentage de vote pour Mathilde PANOT (NUP)');
+    
+            var choropleth_bdba02fa14a2e8166eb76ad905c93aee = L.featureGroup(
+                {}
+            ).addTo(map_aa1bfb605f85cc1dabb8577ac4cacbf1);
+        
+    
+        function geo_json_fc6edbdfaa18cfb760584819fc54fb5f_styler(feature) {
+            switch(feature.id) {
+                case "vitry-sur-seine": 
+                    return {"color": "black", "fillColor": "#c994c7", "fillOpacity": 1, "opacity": 0.7, "weight": 1};
+                case "kremlin-bicetre": 
+                    return {"color": "black", "fillColor": "#980043", "fillOpacity": 1, "opacity": 0.7, "weight": 1};
+                default:
+                    return {"color": "black", "fillColor": "#f1eef6", "fillOpacity": 1, "opacity": 0.7, "weight": 1};
+            }
+        }
+
+        function geo_json_fc6edbdfaa18cfb760584819fc54fb5f_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_fc6edbdfaa18cfb760584819fc54fb5f = L.geoJson(null, {
+                onEachFeature: geo_json_fc6edbdfaa18cfb760584819fc54fb5f_onEachFeature,
+            
+                style: geo_json_fc6edbdfaa18cfb760584819fc54fb5f_styler,
+        });
+
+        function geo_json_fc6edbdfaa18cfb760584819fc54fb5f_add (data) {
+            geo_json_fc6edbdfaa18cfb760584819fc54fb5f
+                .addData(data)
+                .addTo(choropleth_bdba02fa14a2e8166eb76ad905c93aee);
+        }
+            geo_json_fc6edbdfaa18cfb760584819fc54fb5f_add({"features": [{"geometry": {"coordinates": [[[2.3711660804846, 48.803985830563], [2.3756714908057, 48.805917054142], [2.3868918231477, 48.800295474842], [2.3942552313772, 48.800238582074], [2.4088902175713, 48.808463007472], [2.4109918187151, 48.803832546638], [2.4226739248417, 48.791772029944], [2.4147835524145, 48.77727124747], [2.3987277076702, 48.774717240567], [2.3751022594717, 48.771375189199], [2.3678256238607, 48.771903535588], [2.3672764992453, 48.779373862747], [2.3757936004449, 48.787977423714], [2.3713648055528, 48.794953350338], [2.3711660804846, 48.803985830563]]], "type": "Polygon"}, "id": "vitry-sur-seine", "properties": {"code": "94081", "nom": "Vitry-sur-Seine", "pourcentage": 33.91, "voix": 2052}, "type": "Feature"}, {"geometry": {"coordinates": [[[2.3290632572873, 48.813783346799], [2.3318980606376, 48.817010929642], [2.3439025047441, 48.815767001297], [2.3564647458137, 48.815954893718], [2.3448620289972, 48.805407706013], [2.3411905327909, 48.810955658092], [2.3290632572873, 48.813783346799]]], "type": "Polygon"}, "id": "gentilly", "properties": {"code": "94037", "nom": "Gentilly", "pourcentage": 29.43, "voix": 729}, "type": "Feature"}, {"geometry": {"coordinates": [[[2.3711660804846, 48.803985830563], [2.3672229478006, 48.808032065507], [2.3642042811729, 48.816398323996], [2.3900720145113, 48.82569232682], [2.4093609378413, 48.816675787287], [2.4088902175713, 48.808463007472], [2.3942552313772, 48.800238582074], [2.3868918231477, 48.800295474842], [2.3756714908057, 48.805917054142], [2.3711660804846, 48.803985830563]]], "type": "Polygon"}, "id": "ivry-sur-seine", "properties": {"code": "94041", "nom": "Ivry-sur-Seine", "pourcentage": 28.67, "voix": 3805}, "type": "Feature"}, {"geometry": {"coordinates": [[[2.3642042811729, 48.816398323996], [2.3672229478006, 48.808032065507], [2.3477839079735, 48.80149602923], [2.3448620289972, 48.805407706013], [2.3564647458137, 48.815954893718], [2.3642042811729, 48.816398323996]]], "type": "Polygon"}, "id": "kremlin-bicetre", "properties": {"code": "94043", "nom": "Kremlin-Bic\u00eatre", "pourcentage": 40.35, "voix": 2383}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        function geo_json_297d2a60794153e1dd55daa1269500cb_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "#00000000", "fillColor": "#00000000", "weight": 1};
+            }
+        }
+
+        function geo_json_297d2a60794153e1dd55daa1269500cb_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_297d2a60794153e1dd55daa1269500cb = L.geoJson(null, {
+                onEachFeature: geo_json_297d2a60794153e1dd55daa1269500cb_onEachFeature,
+            
+                style: geo_json_297d2a60794153e1dd55daa1269500cb_styler,
+        });
+
+        function geo_json_297d2a60794153e1dd55daa1269500cb_add (data) {
+            geo_json_297d2a60794153e1dd55daa1269500cb
+                .addData(data)
+                .addTo(geo_json_fc6edbdfaa18cfb760584819fc54fb5f);
+        }
+            geo_json_297d2a60794153e1dd55daa1269500cb_add({"features": [{"geometry": {"coordinates": [[[2.3711660804846, 48.803985830563], [2.3756714908057, 48.805917054142], [2.3868918231477, 48.800295474842], [2.3942552313772, 48.800238582074], [2.4088902175713, 48.808463007472], [2.4109918187151, 48.803832546638], [2.4226739248417, 48.791772029944], [2.4147835524145, 48.77727124747], [2.3987277076702, 48.774717240567], [2.3751022594717, 48.771375189199], [2.3678256238607, 48.771903535588], [2.3672764992453, 48.779373862747], [2.3757936004449, 48.787977423714], [2.3713648055528, 48.794953350338], [2.3711660804846, 48.803985830563]]], "type": "Polygon"}, "id": "vitry-sur-seine", "properties": {"code": "94081", "nom": "Vitry-sur-Seine", "pourcentage": 33.91, "voix": 2052}, "type": "Feature"}, {"geometry": {"coordinates": [[[2.3290632572873, 48.813783346799], [2.3318980606376, 48.817010929642], [2.3439025047441, 48.815767001297], [2.3564647458137, 48.815954893718], [2.3448620289972, 48.805407706013], [2.3411905327909, 48.810955658092], [2.3290632572873, 48.813783346799]]], "type": "Polygon"}, "id": "gentilly", "properties": {"code": "94037", "nom": "Gentilly", "pourcentage": 29.43, "voix": 729}, "type": "Feature"}, {"geometry": {"coordinates": [[[2.3711660804846, 48.803985830563], [2.3672229478006, 48.808032065507], [2.3642042811729, 48.816398323996], [2.3900720145113, 48.82569232682], [2.4093609378413, 48.816675787287], [2.4088902175713, 48.808463007472], [2.3942552313772, 48.800238582074], [2.3868918231477, 48.800295474842], [2.3756714908057, 48.805917054142], [2.3711660804846, 48.803985830563]]], "type": "Polygon"}, "id": "ivry-sur-seine", "properties": {"code": "94041", "nom": "Ivry-sur-Seine", "pourcentage": 28.67, "voix": 3805}, "type": "Feature"}, {"geometry": {"coordinates": [[[2.3642042811729, 48.816398323996], [2.3672229478006, 48.808032065507], [2.3477839079735, 48.80149602923], [2.3448620289972, 48.805407706013], [2.3564647458137, 48.815954893718], [2.3642042811729, 48.816398323996]]], "type": "Polygon"}, "id": "kremlin-bicetre", "properties": {"code": "94043", "nom": "Kremlin-Bic\u00eatre", "pourcentage": 40.35, "voix": 2383}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+    geo_json_297d2a60794153e1dd55daa1269500cb.bindTooltip(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature=>typeof(feature)=='object' ? JSON.stringify(feature) : feature;
+    let fields = ["nom", "pourcentage", "voix"];
+    let aliases = ["Commune : ", "R\u00e9sultat (%) : ", "Nombre de voix : "];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i].toLocaleString()}</th>
+            
+            <td>${handleObject(layer.feature.properties[v]).toLocaleString()}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{"className": "foliumtooltip", "sticky": false});
+                     
+    
+    var color_map_7f2e6d24f9f8cc4d05e51e312fdfce00 = {};
+
+    
+    color_map_7f2e6d24f9f8cc4d05e51e312fdfce00.color = d3.scale.threshold()
+              .domain([28.67, 28.693406813627256, 28.71681362725451, 28.740220440881764, 28.76362725450902, 28.787034068136276, 28.81044088176353, 28.833847695390784, 28.857254509018038, 28.88066132264529, 28.904068136272546, 28.9274749498998, 28.950881763527057, 28.97428857715431, 28.997695390781566, 29.02110220440882, 29.044509018036074, 29.067915831663328, 29.09132264529058, 29.114729458917836, 29.138136272545093, 29.161543086172347, 29.1849498997996, 29.208356713426856, 29.23176352705411, 29.255170340681364, 29.278577154308618, 29.301983967935872, 29.32539078156313, 29.348797595190383, 29.372204408817637, 29.39561122244489, 29.419018036072146, 29.4424248496994, 29.465831663326654, 29.489238476953908, 29.512645290581165, 29.53605210420842, 29.559458917835673, 29.582865731462928, 29.60627254509018, 29.629679358717436, 29.65308617234469, 29.676492985971947, 29.6998997995992, 29.723306613226455, 29.74671342685371, 29.770120240480964, 29.793527054108218, 29.81693386773547, 29.840340681362726, 29.86374749498998, 29.887154308617237, 29.91056112224449, 29.933967935871745, 29.957374749499, 29.980781563126254, 30.004188376753508, 30.02759519038076, 30.05100200400802, 30.074408817635273, 30.097815631262527, 30.12122244488978, 30.144629258517035, 30.16803607214429, 30.191442885771544, 30.214849699398798, 30.238256513026055, 30.26166332665331, 30.285070140280563, 30.308476953907817, 30.33188376753507, 30.355290581162325, 30.37869739478958, 30.402104208416834, 30.42551102204409, 30.448917835671345, 30.4723246492986, 30.495731462925853, 30.519138276553107, 30.54254509018036, 30.565951903807616, 30.58935871743487, 30.612765531062127, 30.63617234468938, 30.659579158316635, 30.68298597194389, 30.706392785571143, 30.729799599198397, 30.75320641282565, 30.77661322645291, 30.800020040080163, 30.823426853707417, 30.84683366733467, 30.870240480961925, 30.89364729458918, 30.917054108216433, 30.940460921843687, 30.96386773547094, 30.9872745490982, 31.010681362725453, 31.034088176352707, 31.05749498997996, 31.080901803607215, 31.10430861723447, 31.127715430861723, 31.15112224448898, 31.174529058116235, 31.19793587174349, 31.221342685370743, 31.244749498997997, 31.26815631262525, 31.291563126252505, 31.31496993987976, 31.338376753507017, 31.36178356713427, 31.385190380761525, 31.40859719438878, 31.432004008016033, 31.455410821643287, 31.47881763527054, 31.5022244488978, 31.525631262525053, 31.549038076152307, 31.57244488977956, 31.595851703406815, 31.61925851703407, 31.642665330661323, 31.666072144288577, 31.689478957915835, 31.71288577154309, 31.736292585170343, 31.759699398797597, 31.78310621242485, 31.806513026052105, 31.82991983967936, 31.853326653306617, 31.87673346693387, 31.900140280561125, 31.92354709418838, 31.946953907815633, 31.970360721442887, 31.99376753507014, 32.017174348697395, 32.04058116232465, 32.0639879759519, 32.08739478957916, 32.11080160320641, 32.134208416833665, 32.15761523046093, 32.18102204408818, 32.204428857715435, 32.22783567134269, 32.25124248496994, 32.2746492985972, 32.29805611222445, 32.321462925851705, 32.34486973947896, 32.36827655310621, 32.39168336673347, 32.41509018036072, 32.438496993987975, 32.46190380761523, 32.48531062124248, 32.50871743486974, 32.532124248497, 32.55553106212425, 32.57893787575151, 32.60234468937876, 32.625751503006015, 32.64915831663327, 32.67256513026052, 32.69597194388778, 32.71937875751503, 32.742785571142285, 32.76619238476954, 32.78959919839679, 32.81300601202405, 32.8364128256513, 32.859819639278555, 32.88322645290582, 32.90663326653307, 32.930040080160325, 32.95344689378758, 32.97685370741483, 33.00026052104209, 33.02366733466934, 33.047074148296595, 33.07048096192385, 33.0938877755511, 33.11729458917836, 33.14070140280561, 33.164108216432865, 33.18751503006012, 33.21092184368737, 33.234328657314634, 33.25773547094188, 33.28114228456914, 33.3045490981964, 33.32795591182365, 33.351362725450905, 33.37476953907816, 33.39817635270541, 33.42158316633267, 33.44498997995992, 33.468396793587175, 33.49180360721443, 33.51521042084168, 33.53861723446894, 33.56202404809619, 33.585430861723445, 33.6088376753507, 33.63224448897796, 33.655651302605214, 33.67905811623247, 33.70246492985972, 33.72587174348698, 33.74927855711423, 33.772685370741485, 33.79609218436874, 33.81949899799599, 33.84290581162325, 33.8663126252505, 33.889719438877755, 33.91312625250501, 33.93653306613227, 33.95993987975952, 33.98334669338678, 34.00675350701403, 34.030160320641286, 34.05356713426854, 34.076973947895794, 34.10038076152305, 34.1237875751503, 34.14719438877756, 34.17060120240481, 34.194008016032065, 34.21741482965932, 34.24082164328657, 34.26422845691383, 34.28763527054108, 34.311042084168335, 34.334448897795596, 34.35785571142284, 34.381262525050104, 34.40466933867736, 34.42807615230461, 34.451482965931866, 34.47488977955912, 34.498296593186375, 34.52170340681363, 34.54511022044088, 34.56851703406814, 34.59192384769539, 34.615330661322645, 34.6387374749499, 34.66214428857715, 34.68555110220441, 34.70895791583167, 34.73236472945892, 34.755771543086176, 34.77917835671343, 34.802585170340684, 34.82599198396794, 34.84939879759519, 34.87280561122245, 34.8962124248497, 34.919619238476955, 34.94302605210421, 34.96643286573146, 34.98983967935872, 35.01324649298597, 35.03665330661323, 35.06006012024048, 35.08346693386774, 35.106873747494994, 35.13028056112225, 35.1536873747495, 35.177094188376756, 35.20050100200401, 35.223907815631264, 35.24731462925852, 35.27072144288577, 35.29412825651303, 35.31753507014028, 35.340941883767535, 35.36434869739479, 35.38775551102204, 35.4111623246493, 35.43456913827656, 35.45797595190381, 35.481382765531066, 35.50478957915832, 35.528196392785574, 35.55160320641283, 35.57501002004008, 35.598416833667336, 35.62182364729459, 35.645230460921844, 35.6686372745491, 35.69204408817635, 35.71545090180361, 35.73885771543086, 35.762264529058115, 35.785671342685376, 35.80907815631263, 35.832484969939884, 35.85589178356714, 35.87929859719439, 35.902705410821646, 35.9261122244489, 35.949519038076154, 35.97292585170341, 35.99633266533066, 36.019739478957916, 36.04314629258517, 36.066553106212424, 36.08995991983968, 36.11336673346693, 36.136773547094194, 36.16018036072144, 36.1835871743487, 36.206993987975956, 36.23040080160321, 36.253807615230464, 36.27721442885772, 36.30062124248497, 36.324028056112226, 36.34743486973948, 36.370841683366734, 36.39424849699399, 36.41765531062124, 36.441062124248496, 36.46446893787575, 36.487875751503005, 36.51128256513026, 36.53468937875752, 36.558096192384774, 36.58150300601203, 36.60490981963928, 36.628316633266536, 36.65172344689379, 36.675130260521044, 36.6985370741483, 36.72194388777555, 36.745350701402806, 36.76875751503006, 36.792164328657314, 36.81557114228457, 36.83897795591182, 36.86238476953908, 36.88579158316634, 36.909198396793585, 36.932605210420846, 36.9560120240481, 36.979418837675354, 37.00282565130261, 37.02623246492986, 37.049639278557116, 37.07304609218437, 37.096452905811624, 37.11985971943888, 37.14326653306613, 37.166673346693386, 37.19008016032064, 37.213486973947894, 37.236893787575156, 37.2603006012024, 37.283707414829664, 37.30711422845692, 37.33052104208417, 37.353927855711426, 37.37733466933868, 37.400741482965934, 37.42414829659319, 37.44755511022044, 37.470961923847696, 37.49436873747495, 37.517775551102204, 37.541182364729465, 37.56458917835671, 37.58799599198397, 37.61140280561122, 37.63480961923848, 37.658216432865736, 37.68162324649299, 37.705030060120244, 37.7284368737475, 37.75184368737475, 37.775250501002006, 37.79865731462926, 37.822064128256514, 37.84547094188377, 37.86887775551102, 37.892284569138276, 37.91569138276553, 37.939098196392784, 37.96250501002004, 37.9859118236473, 38.009318637274546, 38.03272545090181, 38.05613226452906, 38.079539078156316, 38.10294589178357, 38.126352705410824, 38.14975951903808, 38.17316633266533, 38.196573146292586, 38.21997995991984, 38.243386773547094, 38.26679358717435, 38.2902004008016, 38.313607214428856, 38.33701402805612, 38.360420841683364, 38.383827655310625, 38.40723446893788, 38.430641282565134, 38.45404809619239, 38.47745490981964, 38.500861723446896, 38.52426853707415, 38.547675350701404, 38.57108216432866, 38.59448897795591, 38.617895791583166, 38.64130260521043, 38.664709418837674, 38.688116232464935, 38.71152304609218, 38.73492985971944, 38.7583366733467, 38.78174348697395, 38.805150300601206, 38.82855711422846, 38.851963927855714, 38.87537074148297, 38.89877755511022, 38.922184368737476, 38.94559118236473, 38.968997995991984, 38.99240480961924, 39.01581162324649, 39.03921843687375, 39.062625250501, 39.08603206412826, 39.10943887775551, 39.13284569138277, 39.156252505010016, 39.17965931863728, 39.20306613226453, 39.226472945891786, 39.24987975951904, 39.273286573146294, 39.29669338677355, 39.3201002004008, 39.343507014028056, 39.36691382765531, 39.390320641282564, 39.41372745490982, 39.43713426853708, 39.460541082164326, 39.48394789579159, 39.50735470941884, 39.530761523046095, 39.55416833667335, 39.5775751503006, 39.60098196392786, 39.62438877755511, 39.647795591182366, 39.67120240480962, 39.694609218436874, 39.71801603206413, 39.74142284569138, 39.764829659318636, 39.7882364729459, 39.81164328657315, 39.835050100200405, 39.85845691382766, 39.88186372745491, 39.90527054108217, 39.92867735470942, 39.952084168336675, 39.97549098196393, 39.99889779559118, 40.02230460921844, 40.04571142284569, 40.069118236472946, 40.0925250501002, 40.115931863727454, 40.139338677354715, 40.16274549098196, 40.18615230460922, 40.20955911823647, 40.23296593186373, 40.256372745490985, 40.27977955911824, 40.30318637274549, 40.32659318637275, 40.35])
+              .range(['#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#f1eef6ff', '#d4b9daff', '#d4b9daff', '#d4b9daff', '#d4b9daff', '#d4b9daff', '#d4b9daff', '#d4b9daff', '#d4b9daff', '#d4b9daff', '#d4b9daff', '#d4b9daff', '#d4b9daff', '#d4b9daff', '#d4b9daff', '#d4b9daff', '#d4b9daff', '#d4b9daff', '#d4b9daff', '#d4b9daff', '#d4b9daff', '#d4b9daff', '#d4b9daff', '#d4b9daff', '#d4b9daff', '#d4b9daff', '#d4b9daff', '#d4b9daff', '#d4b9daff', '#d4b9daff', '#d4b9daff', '#d4b9daff', '#d4b9daff', '#d4b9daff', '#d4b9daff', '#d4b9daff', '#d4b9daff', '#d4b9daff', '#d4b9daff', '#d4b9daff', '#d4b9daff', '#d4b9daff', '#d4b9daff', '#d4b9daff', '#d4b9daff', '#d4b9daff', '#d4b9daff', '#d4b9daff', '#d4b9daff', '#d4b9daff', '#d4b9daff', '#d4b9daff', '#d4b9daff', '#d4b9daff', '#d4b9daff', '#d4b9daff', '#d4b9daff', '#d4b9daff', '#d4b9daff', '#d4b9daff', '#d4b9daff', '#d4b9daff', '#d4b9daff', '#d4b9daff', '#d4b9daff', '#d4b9daff', '#d4b9daff', '#d4b9daff', '#d4b9daff', '#d4b9daff', '#d4b9daff', '#d4b9daff', '#d4b9daff', '#d4b9daff', '#d4b9daff', '#d4b9daff', '#d4b9daff', '#d4b9daff', '#d4b9daff', '#d4b9daff', '#d4b9daff', '#d4b9daff', '#d4b9daff', '#d4b9daff', '#c994c7ff', '#c994c7ff', '#c994c7ff', '#c994c7ff', '#c994c7ff', '#c994c7ff', '#c994c7ff', '#c994c7ff', '#c994c7ff', '#c994c7ff', '#c994c7ff', '#c994c7ff', '#c994c7ff', '#c994c7ff', '#c994c7ff', '#c994c7ff', '#c994c7ff', '#c994c7ff', '#c994c7ff', '#c994c7ff', '#c994c7ff', '#c994c7ff', '#c994c7ff', '#c994c7ff', '#c994c7ff', '#c994c7ff', '#c994c7ff', '#c994c7ff', '#c994c7ff', '#c994c7ff', '#c994c7ff', '#c994c7ff', '#c994c7ff', '#c994c7ff', '#c994c7ff', '#c994c7ff', '#c994c7ff', '#c994c7ff', '#c994c7ff', '#c994c7ff', '#c994c7ff', '#c994c7ff', '#c994c7ff', '#c994c7ff', '#c994c7ff', '#c994c7ff', '#c994c7ff', '#c994c7ff', '#c994c7ff', '#c994c7ff', '#c994c7ff', '#c994c7ff', '#c994c7ff', '#c994c7ff', '#c994c7ff', '#c994c7ff', '#c994c7ff', '#c994c7ff', '#c994c7ff', '#c994c7ff', '#c994c7ff', '#c994c7ff', '#c994c7ff', '#c994c7ff', '#c994c7ff', '#c994c7ff', '#c994c7ff', '#c994c7ff', '#c994c7ff', '#c994c7ff', '#c994c7ff', '#c994c7ff', '#c994c7ff', '#c994c7ff', '#c994c7ff', '#c994c7ff', '#c994c7ff', '#c994c7ff', '#c994c7ff', '#c994c7ff', '#c994c7ff', '#c994c7ff', '#c994c7ff', '#df65b0ff', '#df65b0ff', '#df65b0ff', '#df65b0ff', '#df65b0ff', '#df65b0ff', '#df65b0ff', '#df65b0ff', '#df65b0ff', '#df65b0ff', '#df65b0ff', '#df65b0ff', '#df65b0ff', '#df65b0ff', '#df65b0ff', '#df65b0ff', '#df65b0ff', '#df65b0ff', '#df65b0ff', '#df65b0ff', '#df65b0ff', '#df65b0ff', '#df65b0ff', '#df65b0ff', '#df65b0ff', '#df65b0ff', '#df65b0ff', '#df65b0ff', '#df65b0ff', '#df65b0ff', '#df65b0ff', '#df65b0ff', '#df65b0ff', '#df65b0ff', '#df65b0ff', '#df65b0ff', '#df65b0ff', '#df65b0ff', '#df65b0ff', '#df65b0ff', '#df65b0ff', '#df65b0ff', '#df65b0ff', '#df65b0ff', '#df65b0ff', '#df65b0ff', '#df65b0ff', '#df65b0ff', '#df65b0ff', '#df65b0ff', '#df65b0ff', '#df65b0ff', '#df65b0ff', '#df65b0ff', '#df65b0ff', '#df65b0ff', '#df65b0ff', '#df65b0ff', '#df65b0ff', '#df65b0ff', '#df65b0ff', '#df65b0ff', '#df65b0ff', '#df65b0ff', '#df65b0ff', '#df65b0ff', '#df65b0ff', '#df65b0ff', '#df65b0ff', '#df65b0ff', '#df65b0ff', '#df65b0ff', '#df65b0ff', '#df65b0ff', '#df65b0ff', '#df65b0ff', '#df65b0ff', '#df65b0ff', '#df65b0ff', '#df65b0ff', '#df65b0ff', '#df65b0ff', '#df65b0ff', '#dd1c77ff', '#dd1c77ff', '#dd1c77ff', '#dd1c77ff', '#dd1c77ff', '#dd1c77ff', '#dd1c77ff', '#dd1c77ff', '#dd1c77ff', '#dd1c77ff', '#dd1c77ff', '#dd1c77ff', '#dd1c77ff', '#dd1c77ff', '#dd1c77ff', '#dd1c77ff', '#dd1c77ff', '#dd1c77ff', '#dd1c77ff', '#dd1c77ff', '#dd1c77ff', '#dd1c77ff', '#dd1c77ff', '#dd1c77ff', '#dd1c77ff', '#dd1c77ff', '#dd1c77ff', '#dd1c77ff', '#dd1c77ff', '#dd1c77ff', '#dd1c77ff', '#dd1c77ff', '#dd1c77ff', '#dd1c77ff', '#dd1c77ff', '#dd1c77ff', '#dd1c77ff', '#dd1c77ff', '#dd1c77ff', '#dd1c77ff', '#dd1c77ff', '#dd1c77ff', '#dd1c77ff', '#dd1c77ff', '#dd1c77ff', '#dd1c77ff', '#dd1c77ff', '#dd1c77ff', '#dd1c77ff', '#dd1c77ff', '#dd1c77ff', '#dd1c77ff', '#dd1c77ff', '#dd1c77ff', '#dd1c77ff', '#dd1c77ff', '#dd1c77ff', '#dd1c77ff', '#dd1c77ff', '#dd1c77ff', '#dd1c77ff', '#dd1c77ff', '#dd1c77ff', '#dd1c77ff', '#dd1c77ff', '#dd1c77ff', '#dd1c77ff', '#dd1c77ff', '#dd1c77ff', '#dd1c77ff', '#dd1c77ff', '#dd1c77ff', '#dd1c77ff', '#dd1c77ff', '#dd1c77ff', '#dd1c77ff', '#dd1c77ff', '#dd1c77ff', '#dd1c77ff', '#dd1c77ff', '#dd1c77ff', '#dd1c77ff', '#dd1c77ff', '#980043ff', '#980043ff', '#980043ff', '#980043ff', '#980043ff', '#980043ff', '#980043ff', '#980043ff', '#980043ff', '#980043ff', '#980043ff', '#980043ff', '#980043ff', '#980043ff', '#980043ff', '#980043ff', '#980043ff', '#980043ff', '#980043ff', '#980043ff', '#980043ff', '#980043ff', '#980043ff', '#980043ff', '#980043ff', '#980043ff', '#980043ff', '#980043ff', '#980043ff', '#980043ff', '#980043ff', '#980043ff', '#980043ff', '#980043ff', '#980043ff', '#980043ff', '#980043ff', '#980043ff', '#980043ff', '#980043ff', '#980043ff', '#980043ff', '#980043ff', '#980043ff', '#980043ff', '#980043ff', '#980043ff', '#980043ff', '#980043ff', '#980043ff', '#980043ff', '#980043ff', '#980043ff', '#980043ff', '#980043ff', '#980043ff', '#980043ff', '#980043ff', '#980043ff', '#980043ff', '#980043ff', '#980043ff', '#980043ff', '#980043ff', '#980043ff', '#980043ff', '#980043ff', '#980043ff', '#980043ff', '#980043ff', '#980043ff', '#980043ff', '#980043ff', '#980043ff', '#980043ff', '#980043ff', '#980043ff', '#980043ff', '#980043ff', '#980043ff', '#980043ff', '#980043ff', '#980043ff', '#980043ff']);
+    
+
+    color_map_7f2e6d24f9f8cc4d05e51e312fdfce00.x = d3.scale.linear()
+              .domain([28.67, 40.35])
+              .range([0, 400]);
+
+    color_map_7f2e6d24f9f8cc4d05e51e312fdfce00.legend = L.control({position: 'topright'});
+    color_map_7f2e6d24f9f8cc4d05e51e312fdfce00.legend.onAdd = function (map) {var div = L.DomUtil.create('div', 'legend'); return div};
+    color_map_7f2e6d24f9f8cc4d05e51e312fdfce00.legend.addTo(map_aa1bfb605f85cc1dabb8577ac4cacbf1);
+
+    color_map_7f2e6d24f9f8cc4d05e51e312fdfce00.xAxis = d3.svg.axis()
+        .scale(color_map_7f2e6d24f9f8cc4d05e51e312fdfce00.x)
+        .orient("top")
+        .tickSize(1)
+        .tickValues([28.67, 30.616666666666667, 32.56333333333333, 34.510000000000005, 36.45666666666667, 38.403333333333336, 40.35]);
+
+    color_map_7f2e6d24f9f8cc4d05e51e312fdfce00.svg = d3.select(".legend.leaflet-control").append("svg")
+        .attr("id", 'legend')
+        .attr("width", 450)
+        .attr("height", 40);
+
+    color_map_7f2e6d24f9f8cc4d05e51e312fdfce00.g = color_map_7f2e6d24f9f8cc4d05e51e312fdfce00.svg.append("g")
+        .attr("class", "key")
+        .attr("transform", "translate(25,16)");
+
+    color_map_7f2e6d24f9f8cc4d05e51e312fdfce00.g.selectAll("rect")
+        .data(color_map_7f2e6d24f9f8cc4d05e51e312fdfce00.color.range().map(function(d, i) {
+          return {
+            x0: i ? color_map_7f2e6d24f9f8cc4d05e51e312fdfce00.x(color_map_7f2e6d24f9f8cc4d05e51e312fdfce00.color.domain()[i - 1]) : color_map_7f2e6d24f9f8cc4d05e51e312fdfce00.x.range()[0],
+            x1: i < color_map_7f2e6d24f9f8cc4d05e51e312fdfce00.color.domain().length ? color_map_7f2e6d24f9f8cc4d05e51e312fdfce00.x(color_map_7f2e6d24f9f8cc4d05e51e312fdfce00.color.domain()[i]) : color_map_7f2e6d24f9f8cc4d05e51e312fdfce00.x.range()[1],
+            z: d
+          };
+        }))
+      .enter().append("rect")
+        .attr("height", 10)
+        .attr("x", function(d) { return d.x0; })
+        .attr("width", function(d) { return d.x1 - d.x0; })
+        .style("fill", function(d) { return d.z; });
+
+    color_map_7f2e6d24f9f8cc4d05e51e312fdfce00.g.call(color_map_7f2e6d24f9f8cc4d05e51e312fdfce00.xAxis).append("text")
+        .attr("class", "caption")
+        .attr("y", 21)
+        .text('Pourcentage de vote pour Philippe HARDOUIN (ENS)');
+    
+            var layer_control_6f6193d4fab12914fb27e55e99cdd244 = {
+                base_layers : {
+                    "Mathilde PANOT (NUP)" : choropleth_555cf0ee51f1c7b9ec002a629220c257,
+                    "Philippe HARDOUIN (ENS)" : choropleth_bdba02fa14a2e8166eb76ad905c93aee,
+                },
+                overlays :  {
+                },
+            };
+            L.control.layers(
+                layer_control_6f6193d4fab12914fb27e55e99cdd244.base_layers,
+                layer_control_6f6193d4fab12914fb27e55e99cdd244.overlays,
+                {"autoZIndex": true, "collapsed": false, "position": "topright"}
+            ).addTo(map_aa1bfb605f85cc1dabb8577ac4cacbf1);
+            choropleth_bdba02fa14a2e8166eb76ad905c93aee.remove();
+        
+</script>

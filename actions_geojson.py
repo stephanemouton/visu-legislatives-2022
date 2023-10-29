@@ -1,3 +1,4 @@
+# visu-legislatives-2022 : expérimentation de Folium pour représenter la répartition géographique des législatives françaises de 2022
 # Regroupe les manipulations de données geoJSON, à savoir :
 # - Lit un fichier geojson et en extraie les communes d'une circonscription
 # - Associe au GeoJSON d'une circonscription les données électorales
@@ -6,6 +7,7 @@ import json
 from unidecode import unidecode
 from statistics import mean
 
+import actions_chaine
 
 def extraire_circonscription(communes, geojson_file_name):
     communes_pas_trouvees = communes
@@ -21,7 +23,7 @@ def extraire_circonscription(communes, geojson_file_name):
     liste_longitude = []
     liste_latitude = []
     for donnes_commune in geo['features']:
-        nom = unidecode(donnes_commune['properties']['nom'].lower())
+        nom = actions_chaine.nom_simplifie(donnes_commune['properties']['nom'])
         if nom in communes:
             communes_pas_trouvees.remove(nom)
             geo_commune = {}
